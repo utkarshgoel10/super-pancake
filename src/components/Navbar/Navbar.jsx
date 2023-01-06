@@ -9,7 +9,6 @@ import {
   FaTwitter,
   FaYoutubeSquare,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
@@ -59,7 +58,7 @@ const Navbar = () => {
           {navLinks.map((navlink, index) => {
             return (
               <li key={index}>
-                <Link to={navlink}>{navlink}</Link>
+                <a href={navlink}>{navlink}</a>
               </li>
             );
           })}
@@ -109,9 +108,9 @@ const Navbar = () => {
           {navLinks.map((navlink, index) => {
             return (
               <li key={index}>
-                <Link to={navlink} onClick={() => setToggle(false)}>
+                <a href={navlink} onClick={() => setToggle(false)}>
                   {navlink}
-                </Link>
+                </a>
               </li>
             );
           })}
