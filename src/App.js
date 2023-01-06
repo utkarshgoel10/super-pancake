@@ -25,7 +25,7 @@ const App = () => {
           border: '3px solid #fff',
         }}
         />
-    <SmoothScroll>    
+    <SmoothScroll>        
       <Navbar />
       <Home />
       <About />
@@ -35,13 +35,16 @@ const App = () => {
           <h1 style={{padding: '2rem', color: '#FFF'}}>NodeJs</h1>
           <h1 style={{padding: '2rem', color: '#FFF'}}>MongoDB</h1>
           <h1 style={{padding: '2rem', color: '#FFF'}}>NextJs</h1>
-          <h1 style={{padding: '2rem', color: '#FFF'}}>PHP</h1>
-          <h1 style={{padding: '2rem', color: '#FFF'}}>Shell Scripting</h1>
+          <h1 style={{padding: '2rem', color: '#FFF'}}>PHP</h1>  
+          <h1 style={{padding: '2rem', color: '#FFF'}}>Python</h1>   
+          <h1 style={{padding: '2rem', color: '#FFF'}}>Cloud</h1>         
+          <h1 style={{padding: '2rem', color: '#FFF'}}>Linux</h1>
+          
         </Marquee>
         <Marquee className="mq-b" speed={130} gradient={false} direction="right">
-          <h1 style={{padding: '2rem', color: '#FFF'}}>Speaker</h1>    
+          <h1 style={{padding: '2rem', color: '#FFF'}}>Software Engineer</h1>    
           <h1 style={{padding: '2rem', color: '#FFF'}}>Freelancing</h1>
-          <h1 style={{padding: '2rem', color: '#FFF'}}>Web3</h1>
+          <h1 style={{padding: '2rem', color: '#FFF'}}>Blockchain</h1>
           <h1 style={{padding: '2rem', color: '#FFF'}}>Video Editing</h1>
           <h1 style={{padding: '2rem', color: '#FFF'}}>Instructor</h1>                          
           <h1 style={{padding: '2rem', color: '#FFF'}}>Open Source</h1>

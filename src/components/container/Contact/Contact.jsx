@@ -1,10 +1,22 @@
-import React from "react";
+import { React, useRef } from "react";
 import "./Contact.scss";
-import { contacts } from "../../../Data";
-import { socialIcons } from "../../../Data";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_88tx0q4",
+      "template_c3vh6kt",
+      form.current,
+      "hDeRlK-5jXDd9ZbDm"
+    );
+    e.target.reset();
+  };
+
   return (
     <div className="container" id="contact">
       <motion.div
@@ -15,7 +27,7 @@ const Contact = () => {
         <span>get in touch</span>
         <h1>Contact Me</h1>
       </motion.div>
-      <div className="contact_form">
+      <form ref={form} onSubmit={sendEmail} className="contact_form">
         <motion.div
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: [-80, 0], opacity: 1 }}
@@ -24,18 +36,13 @@ const Contact = () => {
         >
           <h3>Just Say Hi</h3>
           <p className="contact_text">
-          If you'd like to hire me or would like to get in touch for mentorship, assistance, or to discuss a project, please don't hesitate to reach out. I am always open to helping out and discussing new ideas. Feel free to contact me for any reason and I will do my best to assist you. I look forward to hearing from you and discussing how I can be of assistance.
+            If you'd like to hire me or would like to get in touch for
+            mentorship, assistance, or to discuss a project, please don't
+            hesitate to reach out. I am always open to helping out and
+            discussing new ideas. Feel free to contact me for any reason and I
+            will do my best to assist you. I look forward to hearing from you
+            and discussing how I can be of assistance.
           </p>          
-          {/* {contacts.map(contact => {
-            return (
-              <div className='contact_left' key={contact.id}>
-                <div className="icon">
-                  {contact.icon}
-                </div>
-                <p>{ contact.infoText}</p>
-              </div>
-            )
-          })} */}
         </motion.div>
         <motion.div
           initial={{ x: 0, opacity: 0 }}
@@ -54,14 +61,14 @@ const Contact = () => {
             <textarea placeholder="Message"></textarea>
           </div>
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-            className="btn"
+            // whileHover={{ scale: 1.1 }}
+            // transition={{ duration: 0.3 }}
+            // className="btn"
           >
-            <a href="#">Send</a>
+            <button type="submit">Send</button>
           </motion.div>
         </motion.div>
-      </div>
+      </form>
     </div>
   );
 };

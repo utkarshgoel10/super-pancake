@@ -1,8 +1,7 @@
-import { FaTwitter, FaYoutubeSquare, FaNodeJs, FaPhp, FaPython, FaReact, FaSass, FaPhoneAlt, FaMapMarkerAlt, FaPaperPlane, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaTwitter, FaYoutubeSquare, FaNodeJs, FaPhp, FaPython, FaReact, FaSass, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { DiJavascript1, DiLinux } from "react-icons/di";
 import { SiExpress, SiNextdotjs, SiMongodb, SiMysql } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
-import portfolio from "./assets/portfolio.jpg"
 import work1 from "./assets/work1.png";
 import work2 from "./assets/work2.png";
 import work3 from "./assets/work3.png";

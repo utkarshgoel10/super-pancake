@@ -4,7 +4,6 @@ import { icons } from '../../../Data';
 import { experiences } from '../../../Data';
 import { finishes } from '../../../Data';
 import { motion } from 'framer-motion';
-import { Tooltip as ReactTooltip } from 'react-tooltip'
 const Skills = () => {
   const [active, setActive] = useState(1)
   return (
